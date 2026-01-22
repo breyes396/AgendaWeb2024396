@@ -1,0 +1,100 @@
+:root {
+  --main-blue: #18598f;
+  --hover-blue: #034780;
+  --dark-text: #333;
+  --heading-text: #2c3e50;
+  --bg-color: #f4f4f4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--dark-text);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, .contact-details h2 {
+  text-align: center;
+  color: var(--heading-text);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--main-blue);
+  padding: 10px 0;
+}
+
+.nav-btn, .regresar {
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover, .regresar:hover {
+  background-color: var(--hover-blue);
+}
+
+.contact-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.contact-details label {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark-text);
+  margin-top: 10px;
+  display: block;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-column {
+  width: 48%;
+}
+
+
+.contact-details input:not([type="checkbox"]):not([type="radio"]) {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+.contact-details input:disabled {
+  background-color: #e0e0e0;
+}
+
+.contact-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.regresar {
+  background-color: var(--main-blue);
+  border: none;
+  cursor: pointer;
+}
