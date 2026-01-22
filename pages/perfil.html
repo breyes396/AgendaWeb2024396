@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-btn-container">
+            <button class="btn regresar" onclick="regresar()">Regresar</button>
+        </div>
+
+        <h1>Mi Perfil</h1>
+
+        <form class="profile-form">
+            <div class="form-row">
+                <div class="form-column">
+                    <h2>Datos Personales</h2>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="userNombre" disabled>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="userApellidos" disabled>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="userTelefono" disabled>
+
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="userDireccion" disabled>
+
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="userFecha" disabled>
+
+                    <label for="oficio">Oficio:</label>
+                    <input type="text" id="userOficio" disabled>
+                </div>
+
+                <div class="form-column">
+                    <h2>Datos de la Cuenta</h2>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="userCorreo" disabled>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="userContraseña" disabled>
+                </div>
+            </div>
+        </form>
+
+        <div class="logout-btn-container">
+            <button class="btn cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </div>
+
+</body>
+</html>
