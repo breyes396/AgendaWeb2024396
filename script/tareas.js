@@ -1,3 +1,4 @@
+// Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV
 document.addEventListener("DOMContentLoaded", function () {
     const taskList = document.getElementById("todo-items");
     const addTaskBtn = document.getElementById("add-task-btn");
