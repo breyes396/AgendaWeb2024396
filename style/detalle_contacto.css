@@ -1,100 +1,272 @@
+/*Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV*/
 :root {
   --main-blue: #18598f;
   --hover-blue: #034780;
+  --primary-blue: #1100a8;
   --dark-text: #333;
   --heading-text: #2c3e50;
   --bg-color: #f4f4f4;
+  --light-gray: #f9f9f9;
+  --border-color: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--dark-text);
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1, .contact-details h2 {
-  text-align: center;
-  color: var(--heading-text);
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: var(--main-blue);
-  padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--main-blue);
+    padding: 15px;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.nav-btn, .regresar {
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    max-width: 180px;
 }
 
-.nav-btn:hover, .regresar:hover {
-  background-color: var(--hover-blue);
+.nav-btn:hover {
+    background-color: var(--hover-blue);
+    transform: translateY(-2px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.details-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.details-header h1 {
+    color: var(--heading-text);
+    font-size: 2rem;
+    margin: 0;
 }
 
 .contact-details {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.contact-details label {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--dark-text);
-  margin-top: 10px;
-  display: block;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
 }
 
 .form-column {
-  width: 48%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-
-.contact-details input:not([type="checkbox"]):not([type="radio"]) {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  box-sizing: border-box; 
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-details input:disabled {
-  background-color: #e0e0e0;
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--light-gray);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(17, 0, 168, 0.1);
+}
+
+.form-group input:disabled {
+    background-color: #e0e0e0;
+    color: #666;
+    cursor: not-allowed;
 }
 
 .contact-btns {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .regresar {
-  background-color: var(--main-blue);
-  border: none;
-  cursor: pointer;
+    background-color: var(--primary-blue);
+    color: white;
+    min-width: 200px;
 }
+
+.regresar:hover {
+    background-color: var(--hover-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Para tablets (768px o menos) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .details-header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .contact-details {
+        padding: 25px;
+    }
+    
+    .form-row {
+        gap: 20px;
+    }
+    
+    .form-group label {
+        font-size: 15px;
+    }
+    
+    .form-group input {
+        padding: 11px;
+        font-size: 15px;
+    }
+    
+    .btn {
+        padding: 13px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .nav-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        min-width: 120px;
+        flex: 1 0 calc(50% - 8px);
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 10px;
+        margin: 15px auto;
+    }
+    
+    .details-header {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .details-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-details {
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-column {
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 5px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .contact-btns {
+        margin-top: 15px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        min-width: 0;
+    }
+    
+    .regresar {
+        width: 100%;
+    }
+}
+
+
+
+

@@ -1,3 +1,4 @@
+<!-- Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,45 +8,69 @@
     <link rel="stylesheet" href="../style/detalle_contacto.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="contactos.html" class="nav-btn">Mis Contactos</a>
+        <a href="favoritos.html" class="nav-btn">Favoritos</a>
+        <a href="nuevo_contacto.html" class="nav-btn">Nuevo Contacto</a>
+        <a href="tareas.html" class="nav-btn">Tareas</a>
+        <a href="perfil.html" class="nav-btn">Mi Perfil</a>
+    </nav>
 
     <div class="container">
         <div class="contact-details">
-            <h1>Detalles del Contacto</h1>
+            <header class="details-header">
+                <h1>Detalles del Contacto</h1>
+            </header>
+            
             <form>
                 <div class="form-row">
                     <div class="form-column">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="contactNombre" disabled>
-
-                        <label for="apellidos">Apellidos</label>
-                        <input type="text" id="contactApellidos" disabled>
-
-                        <label for="correo">Correo electrónico</label>
-                        <input type="email" id="contactCorreo" disabled>
-
-                        <label for="telefono">Número de Teléfono</label>
-                        <input type="tel" id="contactTelefono" disabled>
+                        <div class="form-group">
+                            <label for="contactNombre">Nombre</label>
+                            <input type="text" id="contactNombre" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactApellidos">Apellidos</label>
+                            <input type="text" id="contactApellidos" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactCorreo">Correo electrónico</label>
+                            <input type="email" id="contactCorreo" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactTelefono">Número de Teléfono</label>
+                            <input type="tel" id="contactTelefono" disabled>
+                        </div>
                     </div>
 
                     <div class="form-column">
-                        <label for="direccion">Dirección</label>
-                        <input type="text" id="contactDireccion" disabled>
-
-                        <label for="fecha">Fecha de Nacimiento</label>
-                        <input type="date" id="contactFecha" disabled>
-
-                        <label for="oficio">Oficio</label>
-                        <input type="text" id="contactOficio" disabled>
+                        <div class="form-group">
+                            <label for="contactDireccion">Dirección</label>
+                            <input type="text" id="contactDireccion" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactFecha">Fecha de Nacimiento</label>
+                            <input type="date" id="contactFecha" disabled>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactOficio">Oficio</label>
+                            <input type="text" id="contactOficio" disabled>
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
 
         <div class="contact-btns">
-            <button type="button" class="regresar" onclick="regresar()">Regresar</button>
+            <button type="button" class="btn regresar" onclick="regresar()">← Regresar a Contactos</button>
         </div>
     </div>
+    
     <script src="../script/detalle_contacto.js"></script>
-
 </body>
 </html>
