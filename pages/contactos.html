@@ -1,3 +1,4 @@
+<!-- Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,34 +9,72 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="contactos.html" class="nav-btn">Mis Contactos</a>
+    <nav class="navbar">
+        <a href="contactos.html" class="nav-btn active">Mis Contactos</a>
         <a href="favoritos.html" class="nav-btn">Favoritos</a>
         <a href="nuevo_contacto.html" class="nav-btn">Nuevo Contacto</a>
         <a href="tareas.html" class="nav-btn">Tareas</a>
         <a href="perfil.html" class="nav-btn">Mi Perfil</a>
-    </div>
+    </nav>
 
     <div class="container">
-        <h1>Mis Contactos</h1>
+        <header class="main-header">
+            <h1>Mis Contactos</h1>
+        </header>
 
-        <div class="contact-list">
-            <button class="contact-item" onclick="verDetalleContactos('Juan Pérez')">
-                <div class="contact-info">Juan Pérez: juan.perez@email.com | 123456789</div>
-            </button>
-            <button class="contact-item" onclick="verDetalleContactos('Ana Gómez')">
-                <div class="contact-info">Ana Gómez: ana.gomez@email.com | 987654321</div>
-            </button>
-            <button class="contact-item" onclick="verDetalleContactos('Carlos Rodríguez')">
-                <div class="contact-info">Carlos Rodríguez: carlos.rodriguez@email.com | 564738291</div>
-            </button>
-            <button class="contact-item" onclick="verDetalleContactos('Laura Díaz')">
-                <div class="contact-info">Laura Díaz: laura.diaz@email.com | 876543210</div>
-            </button>
-            <button class="contact-item" onclick="verDetalleContactos('Pedro López')">
-                <div class="contact-info">Pedro López: pedro.lopez@email.com | 112233445</div>
-            </button>
-        </div>
+        <main class="contact-list-container">
+            <div class="contact-list">
+                <button class="contact-item" onclick="verDetalleContactos('Juan Pérez')">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Juan Pérez</h3>
+                        <div class="contact-details">
+                            <span class="contact-email">juan.perez@email.com</span>
+                            <span class="contact-phone">123456789</span>
+                        </div>
+                    </div>
+                </button>
+                
+                <button class="contact-item" onclick="verDetalleContactos('Ana Gómez')">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Ana Gómez</h3>
+                        <div class="contact-details">
+                            <span class="contact-email">ana.gomez@email.com</span>
+                            <span class="contact-phone">987654321</span>
+                        </div>
+                    </div>
+                </button>
+                
+                <button class="contact-item" onclick="verDetalleContactos('Carlos Rodríguez')">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Carlos Rodríguez</h3>
+                        <div class="contact-details">
+                            <span class="contact-email">carlos.rodriguez@email.com</span>
+                            <span class="contact-phone">564738291</span>
+                        </div>
+                    </div>
+                </button>
+                
+                <button class="contact-item" onclick="verDetalleContactos('Laura Díaz')">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Laura Díaz</h3>
+                        <div class="contact-details">
+                            <span class="contact-email">laura.diaz@email.com</span>
+                            <span class="contact-phone">876543210</span>
+                        </div>
+                    </div>
+                </button>
+                
+                <button class="contact-item" onclick="verDetalleContactos('Pedro López')">
+                    <div class="contact-info">
+                        <h3 class="contact-name">Pedro López</h3>
+                        <div class="contact-details">
+                            <span class="contact-email">pedro.lopez@email.com</span>
+                            <span class="contact-phone">112233445</span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </main>
     </div>
 
     <script src="../script/detalle_contacto.js"></script>
