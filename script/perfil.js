@@ -1,3 +1,4 @@
+// Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV
 window.onload = function() {
     var email = localStorage.getItem("userEmail");
     var password = localStorage.getItem("userPassword");
