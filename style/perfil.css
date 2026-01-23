@@ -1,106 +1,164 @@
+/*Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV*/
 :root {
-  --main-blue: #18598f;
-  --hover-blue: #034780;
-  --dark-text: #333;
-  --heading-text: #2c3e50;
-  --bg-color: #f4f4f4;
+    --main-blue: #18598f;
+    --hover-blue: #034780;
+    --dark-blue: #1100a8;
+    --dark-text: #333;
+    --heading-text: #2c3e50;
+    --bg-color: #f4f4f4;
+    --error-red: #e74c3c;
+    --error-red-dark: #c0392b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--dark-text);
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
 h1 {
-  text-align: center;
-  color: var(--heading-text);
+    text-align: center;
+    color: var(--heading-text);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.back-btn-container {
+    margin-bottom: 25px;
 }
 
 .profile-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.profile-form label {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--dark-text);
-  margin-top: 10px;
-  display: block;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
 }
 
 .form-column {
-  width: 48%;
+    width: 50%;
 }
 
-.profile-form input:not([type="checkbox"]):not([type="radio"]) {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  box-sizing: border-box;
+h2 {
+    color: var(--heading-text);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.profile-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 .profile-form input:disabled {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
+    color: #666;
 }
 
 .btn {
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: var(--main-blue);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--hover-blue);
+    font-size: 16px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .regresar {
-  background-color: var(--main-blue);
-  margin-top: 20px;
+    background-color: var(--main-blue);
+    color: white;
 }
 
 .regresar:hover {
-  background-color: var(--hover-blue);
+    background-color: var(--hover-blue);
 }
 
 .cerrar-sesion {
-  background-color: #e74c3c;
-  margin-top: 20px;
+    background-color: var(--error-red);
+    color: white;
 }
 
 .cerrar-sesion:hover {
-  background-color: #c0392b;
+    background-color: var(--error-red-dark);
 }
 
 .back-btn-container,
 .logout-btn-container {
-  text-align: left;
-  margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .profile-form {
+        padding: 25px;
+    }
+    
+    .form-row {
+        gap: 20px;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-form label {
+        font-size: 15px;
+    }
+    
+    .profile-form input {
+        padding: 11px;
+        font-size: 15px;
+    }
+    
+    .btn {
+        padding: 13px 25px;
+        font-size: 15px;
+    }
 }
