@@ -1,81 +1,207 @@
+/*Billy Reyes - 2024396 - Act.1 Práctica Supervisada - IN6BV*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; 
     margin: 0;
     background-color: #8fd4dd;
+    padding: 20px; 
 }
 
 .login-container {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
 }
 
-.welcome-message {
+.login-container h1 {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-
-.welcome-message h3 {
-    margin: 0;
-    color: #000000;
-}
-
-.welcome-message p {
-    margin: 15px 0 0;
-    color: #000000;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
 }
 
 .logo {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .logo-img {
     width: 100px; 
     height: auto;
+    max-width: 100%; 
 }
 
-
-.login-container h1 {
+.welcome-message {
     text-align: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #1100a8;
 }
 
+.welcome-message h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.welcome-message p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
 }
 
 .input-group input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1100a8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(17, 0, 168, 0.1);
 }
 
 .btn {
     width: 100%;
-    padding: 10px;
+    padding: 14px;
     background-color: #1100a8;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
 }
 
 .btn:hover {
     background-color: #18598f;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .login-container {
+        padding: 20px;
+        max-width: 350px;
+    }
+    
+    .login-container h1 {
+        font-size: 1.6rem;
+    }
+    
+    .btn {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start; 
+        padding-top: 40px; 
+    }
+    
+    .login-container {
+        padding: 20px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    .login-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .welcome-message {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-message h3 {
+        font-size: 1rem;
+    }
+    
+    .welcome-message p {
+        font-size: 0.9rem;
+    }
+    
+    .input-group {
+        margin-bottom: 18px;
+    }
+    
+    .input-group input {
+        padding: 11px;
+        font-size: 0.95rem;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    
+    .logo-img {
+        width: 90px; 
+    }
+}
+
+@media (max-width: 360px) {
+    .login-container {
+        padding: 15px 12px;
+    }
+    
+    .login-container h1 {
+        font-size: 1.4rem;
+    }
+    
+    .welcome-message h3 {
+        font-size: 0.95rem;
+    }
+    
+    .welcome-message p {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 11px;
+    }
 }
